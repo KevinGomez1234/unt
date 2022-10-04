@@ -50,8 +50,6 @@ public class AppTest
     @Autowired
     ReceivePersonController controller;
 
-
-
     @BeforeEach
     void initService() {
         closeable = MockitoAnnotations.openMocks(this);
