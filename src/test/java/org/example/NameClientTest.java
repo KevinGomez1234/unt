@@ -44,6 +44,7 @@ public class NameClientTest {
         //Any is used for Class types matching not for specific values, use eq for specific values.
         when(restTemplate.postForObject(Mockito.any(String.class), Mockito.any(HttpEntity.class), Mockito.eq(String.class))).thenReturn(letterToBeRurned);
         String expected = nameClient.shoutRandomLetter();
+        Mockito.verify(restTemplate, Mockito.times(1)).postForObject(Mockito.any(String.class), Mockito.any(HttpEntity.class), Mockito.eq(String.class));
         System.out.println(expected);
     }
 
